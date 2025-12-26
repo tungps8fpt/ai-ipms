@@ -26,9 +26,6 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 vosk_model = Model(VOSK_MODEL_PATH)
 recognizer = KaldiRecognizer(vosk_model, 16000)
 
-tts = pyttsx3.init()
-tts.setProperty("rate", 160)
-
 def speak(text):
     print("AI:", text)
     subprocess.call(["espeak-ng", "-v", "vi", "-s", "150", text])
