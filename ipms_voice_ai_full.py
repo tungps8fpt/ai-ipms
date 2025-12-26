@@ -65,6 +65,9 @@ def listen_text():
                 if txt:
                     print("USER:", txt)
                     return txt.lower()
+            else:
+                partial = recognizer.PartialResult()
+                print("partial:", partial)
 
 
 # ---------------- SAVE USER STYLE ----------------
