@@ -249,6 +249,10 @@ def analyze_genset(data):
 # ---------------- AI CLOUD ENGINE ----------------
 
 def ask_deepseek(system, user):
+
+    if not DEEPSEEK_API_KEY:
+        return "Chưa cấu hình DEEPSEEK_API_KEY trong biến môi trường."
+    
     headers = {
         "Authorization": f"Bearer {DEEPSEEK_API_KEY}",
         "Content-Type": "application/json"
@@ -269,7 +273,6 @@ def ask_deepseek(system, user):
         timeout=40
     )
 
-    return r.json()["choices"][0]["message"]["content"]
 
 # ---------------- SMART ANSWER ----------------
 
