@@ -12,7 +12,7 @@ from vosk import Model, KaldiRecognizer
 
 # ---------------- CONFIG ----------------
 
-WAKE_WORD = "ipms oi"
+WAKE_WORD = "travis"
 
 DB_PATH = "/home/web/uiweb/database/ipms_paramater.db"
 
